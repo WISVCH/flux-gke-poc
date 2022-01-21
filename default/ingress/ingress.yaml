@@ -19,3 +19,13 @@ spec:
             port:
               number: 80
         pathType: ImplementationSpecific
+  - host: test2.wisv.ch
+    http:
+      paths:
+      - backend:
+          service:
+            name: podinfo
+            port:
+              number: 9898
+        pathType: ImplementationSpecific
+
