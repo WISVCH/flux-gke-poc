@@ -3,4 +3,4 @@ kind: ServiceAccount
 metadata:
   name: mand
   annotations:
-      iam.gke.io/gcp-service-account: mand-941@wisvch-poc.iam.gserviceaccount.com
+    iam.gke.io/gcp-service-account: mand-941@wisvch-poc.iam.gserviceaccount.com
