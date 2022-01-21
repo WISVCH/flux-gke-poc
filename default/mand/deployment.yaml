@@ -33,14 +33,14 @@ spec:
         - name: CONNECTURL
           value: https://connect.ch.tudelft.nl
         - name: CONNECTCLIENTID
-          value: mand
+          value: f75398d3-5322-4d11-97ce-427e7d6a53aa
         - name: CLIENTSECRET
           valueFrom:
             secretKeyRef:
               name: mand
               key: OIDC_CLIENT_SECRET
         - name: REDIRECTURL
-          value: https://wisv.ch/admin/
+          value: https://testmand.wisv.ch/admin/
         - name: ALLOWEDGROUP
           value: mand
         - name: EMPTYREDIRECT
