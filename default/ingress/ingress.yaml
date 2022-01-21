@@ -4,11 +4,6 @@ metadata:
   name: ingress
   namespace: default
 spec:
-  defaultBackend:
-    service:
-      name: nginx-1-service
-      port:
-        number: 80
   rules:
   - host: test.wisv.ch
     http:
@@ -28,4 +23,3 @@ spec:
             port:
               number: 9898
         pathType: ImplementationSpecific
-
