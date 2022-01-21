@@ -3,6 +3,10 @@ kind: Ingress
 metadata:
   name: ingress
   namespace: default
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: 34.149.67.180
+    networking.gke.io/managed-certificates: managed-cert
+    kubernetes.io/ingress.class: "gce"
 spec:
   rules:
   - host: test.wisv.ch
