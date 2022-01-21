@@ -22,16 +22,14 @@ spec:
       labels:
         app: mand
     spec:
+      serviceAccountName: mand
       containers:
       - name: mand
         image: ghcr.io/wisvch/mand:20220117-5205c76
         imagePullPolicy: IfNotPresent
         env:
         - name: DBCONNECTIONSTRING
-          valueFrom:
-            secretKeyRef:
-              name: mand
-              key: DB_CONNSTRING
+          value: "host=127.0.0.1 port=5432 dbname=mand user=mand-941@wisvch-poc.iam sslmode=disable"
         - name: CONNECTURL
           value: https://connect.ch.tudelft.nl
         - name: CONNECTCLIENTID
@@ -79,6 +77,18 @@ spec:
           limits:
             cpu: 10m
             memory: 32Mi
+          requests:
+            cpu: 10m
+            memory: 32Mi
+      - name: cloud-sql-proxy
+        image: gcr.io/cloudsql-docker/gce-proxy:1.28.0
+        command:
+          - "/cloud_sql_proxy"
+          - "-instances=wisvch-poc:europe-west4:psql=tcp:5432"
+          - "-enable_iam_login"
+        securityContext:
+          runAsNonRoot: true
+        resources:
           requests:
             cpu: 10m
             memory: 32Mi
