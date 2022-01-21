@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mand
+  namespace: default
+  labels:
+    app: mand
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: http
+  selector:
+    app: mand
+  type: ClusterIP
