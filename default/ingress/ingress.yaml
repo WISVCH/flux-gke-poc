@@ -36,3 +36,12 @@ spec:
             port:
               name: http
         pathType: ImplementationSpecific
+  - host: register.wisv.ch
+    http:
+      paths:
+      - backend:
+          service:
+            name: mand
+            port:
+              name: http
+        pathType: ImplementationSpecific
