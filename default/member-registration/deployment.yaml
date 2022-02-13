@@ -45,7 +45,7 @@ spec:
           - name: SPRING_PROFILES_ACTIVE
             value: production
           - name: SPRING_DATASOURCE_URL
-            value: jdbc:postgresql://joost.chnet/member-registration?ssl=true&sslrootcert=/usr/local/share/ca-certificates/wisvch.crt
+            value: jdbc:postgresql://127.0.0.1/member-registration?ssl=disable
           - name: SPRING_DATASOURCE_USERNAME
             value: member-registration@wisvch-poc.iam
           - name: WISVCH_CONNECT_ADMIN_GROUPS
