@@ -77,7 +77,7 @@ spec:
         - containerPort: 9000
           name: http
           protocol: TCP
-       livenessProbe:
+        livenessProbe:
           failureThreshold: 10
           httpGet:
             path: /register/actuator/health
