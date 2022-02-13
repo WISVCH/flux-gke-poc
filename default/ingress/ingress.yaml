@@ -41,7 +41,7 @@ spec:
       paths:
       - backend:
           service:
-            name: mand
+            name: member-registration
             port:
               name: http
         pathType: ImplementationSpecific
