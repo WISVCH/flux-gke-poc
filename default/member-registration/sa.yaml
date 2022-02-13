@@ -3,4 +3,4 @@ kind: ServiceAccount
 metadata:
   name: member-registration
   annotations:
-    iam.gke.io/gcp-service-account:  member-registration@wisvch-poc.iam.gserviceaccount.com 
+    iam.gke.io/gcp-service-account: member-registration@wisvch-poc.iam.gserviceaccount.com 
