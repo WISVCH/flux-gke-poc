@@ -4,5 +4,5 @@ namespace: default
 resources:
 - ingress
 - podinfo
-- mand
 - member-registration
+- mand
