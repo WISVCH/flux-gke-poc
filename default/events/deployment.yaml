@@ -47,7 +47,7 @@ spec:
         - name: SPRING_DATASOURCE_USERNAME
           value: events@wisvch-poc.iam
         - name: SPRING_JPA_HIBERNATE_HB2MDDL_AUTO
-          value: create-drop
+          value: validate
         - name: SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_WISVCHCONNECT_ISSUER_URI
           value: https://connect.ch.tudelft.nl
         - name: SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_WISVCHCONNECT_CLIENTURI
@@ -59,7 +59,9 @@ spec:
         - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_WISVCHCONNECT_SCOPE
           value: openid, profile, email, ldap
         - name: SPRING_FLYWAY_ENABLE
-          value: "false"
+          value: "true"
+        - name: SPRING_FLYWAY_SCHEMAS
+          value: event
         - name: TZ
           value: Europe/Amsterdam
         - name: WISVCH_CONNECT_ADMIN_GROUPS
