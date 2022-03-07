@@ -25,6 +25,8 @@ spec:
       serviceAccountName: events
       containers:
       - name: events
+        image: ghcr.io/wisvch/events:20220305-a6fca8a
+        imagePullPolicy: IfNotPresent
         env:
         - name: MANAGEMENT_CONTEXT_PATH
           value: /management
@@ -78,8 +80,6 @@ spec:
           value: events
         - name: WISVCH_CONNECT_REGISTERED_CLIENT_CLIENT_SECRET
           value: notaneventsclient
-        image: ghcr.io/wisvch/events:20220305-a6fca8a
-        imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 10
           httpGet:
