@@ -26,59 +26,58 @@ spec:
       containers:
       - name: events
         env:
-          - name: MANAGEMENT_CONTEXT_PATH
-            value: /management
-          - name: MANAGEMENT_ENDPOINTS_ENABLED
-            value: "false"
-          - name: MANAGEMENT_ENDPOINTS_HEALTH_ENABLED
-            value: "true"
-          - name: SERVER_PORT
-            value: "8080"
-          - name: SERVER_SERVLET_CONTEXT_PATH
-            value: /events
-          - name: SPRING_MAIL_HOST
-            value: ch.tudelft.nl
-          - name: SPRING_MAIL_PORT
-            value: "25"
-          - name: SPRING_DATASOURCE_URL
-            value: jdbc:postgresql://127.0.0.1/events?ssl=false
-          - name: SPRING_DATASOURCE_USERNAME
-            value: events@wisvch-poc.iam
-          - name: SPRING_JPA_HIBERNATE_HB2MDDL_AUTO
-            value: create-drop
-          - name: SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_WISVCHCONNECT_ISSUER_URI
-            value: https://connect.ch.tudelft.nl
-          - name: SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_WISVCHCONNECT_CLIENTURI
-            value: https://events.wisv.ch/events
-          - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_WISVCHCONNECT_CLIENT_ID
-            value: 10c89996-082e-43b2-941a-56806f59a61c
-          - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_WISVCHCONNECT_CLIENT_SECRET
-            value: AJ3vpoSdat9B8s6ZDOAL74oNbKa4ZtFnQ9pnppED-YZruWC2DnNfn9J_e23J7QloMUx25e-tq6VUeROKF9FN8i0
-          - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_WISVCHCONNECT_SCOPE
-            value: openid, profile, email, ldap
-          - name: SPRING_FLYWAY_ENABLE
-            value: false
-          - name: TZ
-            value: Europe/Amsterdam
-          - name: WISVCH_CONNECT_ADMIN_GROUPS
-            value: chbeheer,dienst2,epa
-          - name: WISVCH_CONNECT_BETA_USERS
-            value: svenp, florisv, daveys, davida, ruthk, gijsw, karimo, willemijnv,
-              svenh, jurriaant, yoshia, joepj, juliand
-          - name: WISVCH_EVENTS_IMAGE_PATH
-            value: https://ch.tudelft.nl/events/api/v1/documents/
-          - name: MOLLIE_CLIENTURI
-            value: https://ch.tudelft.nl/events
-          - name: MOLLIE_APIKEY
-            value: ThisIsNotARealKey
-          - name: WISVCH_CONNECT_CLIENT_URI
-            value: https://events.wisv.ch/events
-          - name: WISVCH_CONNECT_REGISTERED_CLIENT_CLIENT_NAME
-            value: CH Events production
-          - name: WISVCH_CONNECT_REGISTERED_CLIENT_CLIENT_ID
-            value: events
-          - name: WISVCH_CONNECT_REGISTERED_CLIENT_CLIENT_SECRET
-            value: notaneventsclient
+        - name: MANAGEMENT_CONTEXT_PATH
+          value: /management
+        - name: MANAGEMENT_ENDPOINTS_ENABLED
+          value: false
+        - name: MANAGEMENT_ENDPOINTS_HEALTH_ENABLED
+          value: true
+        - name: SERVER_PORT
+          value: 8080
+        - name: SERVER_SERVLET_CONTEXT_PATH
+          value: /events
+        - name: SPRING_MAIL_HOST
+          value: ch.tudelft.nl
+        - name: SPRING_MAIL_PORT
+          value: 25
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:postgresql://127.0.0.1/events?ssl=false
+        - name: SPRING_DATASOURCE_USERNAME
+          value: events@wisvch-poc.iam
+        - name: SPRING_JPA_HIBERNATE_HB2MDDL_AUTO
+          value: create-drop
+        - name: SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_WISVCHCONNECT_ISSUER_URI
+          value: https://connect.ch.tudelft.nl
+        - name: SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_WISVCHCONNECT_CLIENTURI
+          value: https://events.wisv.ch/events
+        - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_WISVCHCONNECT_CLIENT_ID
+          value: 10c89996-082e-43b2-941a-56806f59a61c
+        - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_WISVCHCONNECT_CLIENT_SECRET
+          value: AJ3vpoSdat9B8s6ZDOAL74oNbKa4ZtFnQ9pnppED-YZruWC2DnNfn9J_e23J7QloMUx25e-tq6VUeROKF9FN8i0
+        - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_WISVCHCONNECT_SCOPE
+          value: openid, profile, email, ldap
+        - name: SPRING_FLYWAY_ENABLE
+          value: false
+        - name: TZ
+          value: Europe/Amsterdam
+        - name: WISVCH_CONNECT_ADMIN_GROUPS
+          value: chbeheer,dienst2,epa
+        - name: WISVCH_CONNECT_BETA_USERS
+          value: svenp, florisv, daveys, davida, ruthk, gijsw, karimo, willemijnv, svenh, jurriaant, yoshia, joepj, juliand
+        - name: WISVCH_EVENTS_IMAGE_PATH
+          value: https://ch.tudelft.nl/events/api/v1/documents/
+        - name: MOLLIE_CLIENTURI
+          value: https://ch.tudelft.nl/events
+        - name: MOLLIE_APIKEY
+          value: ThisIsNotARealKey
+        - name: WISVCH_CONNECT_CLIENT_URI
+          value: https://events.wisv.ch/events
+        - name: WISVCH_CONNECT_REGISTERED_CLIENT_CLIENT_NAME
+          value: CH Events production
+        - name: WISVCH_CONNECT_REGISTERED_CLIENT_CLIENT_ID
+          value: events
+        - name: WISVCH_CONNECT_REGISTERED_CLIENT_CLIENT_SECRET
+          value: notaneventsclient
         image: ghcr.io/wisvch/events:20220305-a6fca8a
         imagePullPolicy: IfNotPresent
         livenessProbe:
