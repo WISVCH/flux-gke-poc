@@ -35,7 +35,7 @@ spec:
           - name: SERVER_PORT
             value: "9000"
           - name: SERVER_SERVLET_CONTEXT_PATH
-            value: /register
+            value: /
           - name: SPRING_MAIL_HOST
             value: ch.tudelft.nl
           - name: SPRING_MAIL_PORT
