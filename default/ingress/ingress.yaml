@@ -45,3 +45,12 @@ spec:
             port:
               name: http
         pathType: ImplementationSpecific
+  - host: events.wisv.ch
+    http:
+      paths:
+        - backend:
+            service:
+              name: events
+              port:
+                name: http
+          pathType: ImplementationSpecific
