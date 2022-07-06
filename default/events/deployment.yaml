@@ -7,7 +7,7 @@ metadata:
     app: events
 spec:
   replicas: 1
-  revisionHistoryLimit: 5
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: events
@@ -46,8 +46,8 @@ spec:
           value: "25"
         - name: SPRING_FLYWAY_ENABLED
           value: "false"
-        - name: SPRING_JPA_HIBERNATE_DLL-AUTO
-          value: create
+        - name: SPRING_JPA_HIBERNATE_HB2MDDL_AUTO
+          value: create-drop
         - name: SPRING_DATASOURCE_URL
           value: jdbc:postgresql://127.0.0.1/events?ssl=false
         - name: SPRING_DATASOURCE_USERNAME
