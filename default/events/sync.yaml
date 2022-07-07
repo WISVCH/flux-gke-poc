@@ -7,6 +7,13 @@ metadata:
 spec:
   image: ghcr.io/wisvch/events
   interval: 1m0s
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: events-repo-policy
+  namespace: flux-system
+spec:
   imageRepositoryRef:
     name: events-image
   filterTags:
@@ -15,4 +22,3 @@ spec:
   policy:
     numerical:
       order: desc
-
