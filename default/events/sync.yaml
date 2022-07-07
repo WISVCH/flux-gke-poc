@@ -17,7 +17,7 @@ spec:
   path: ./kustomize
   prune: true
   sourceRef:
-    kind: GitRepository
+    kind: ImageRepository
     name: events
   targetNamespace: default
 #  containers:
