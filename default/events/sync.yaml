@@ -7,4 +7,11 @@ metadata:
 spec:
   image: ghcr.io/wisvch/events
   interval: 1m0s
+  imageRepositoryRef:
+    filterTags:
+      pattern: '(?P<ts>[0-9]+)-.+'
+      extract: $date
+    policy:
+      numerical:
+        order: desc
 
