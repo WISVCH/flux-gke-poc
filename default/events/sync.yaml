@@ -8,6 +8,7 @@ spec:
   image: ghcr.io/wisvch/events
   interval: 1m0s
   imageRepositoryRef:
+    name: events-image
     filterTags:
       pattern: '(?P<ts>[0-9]+)-.+'
       extract: $date
