@@ -142,22 +142,22 @@ spec:
 #      numerical:
 #        order: desc
 #
-=======
-  image: ghcr.io/wisvch/events
-  interval: 1m0s
----
-apiVersion: image.toolkit.fluxcd.io/v1beta1
-kind: ImagePolicy
-metadata:
-  name: events-repo-policy
-  namespace: flux-system
-spec:
-  imageRepositoryRef:
-    name: events-image
-  filterTags:
-    pattern: '(?P<ts>[0-9]+)-.+'
-    extract: $date
-  policy:
-    numerical:
-      order: desc
->>>>>>> 8b05f9826966887e0882dc2fa9a612a0485aed71
+#=======
+#  image: ghcr.io/wisvch/events
+#  interval: 1m0s
+#---
+#apiVersion: image.toolkit.fluxcd.io/v1beta1
+#kind: ImagePolicy
+#metadata:
+#  name: events-repo-policy
+#  namespace: flux-system
+#spec:
+#  imageRepositoryRef:
+#    name: events-image
+#  filterTags:
+#    pattern: '(?P<ts>[0-9]+)-.+'
+#    extract: $date
+#  policy:
+#    numerical:
+#      order: desc
+#>>>>>>> 8b05f9826966887e0882dc2fa9a612a0485aed71
