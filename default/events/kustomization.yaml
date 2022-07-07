@@ -4,3 +4,4 @@ resources:
 - sa.yaml
 - deployment.yaml
 - service.yaml
+- sync.yaml
