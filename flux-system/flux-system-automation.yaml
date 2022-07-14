@@ -11,8 +11,8 @@ spec:
         branch: main
     commit:
       author:
-        email: ChristiaanHuygens@users.noreply.github.com
-        name: ChristiaanHuygens
+        email: christiaanhuygens@users.noreply.github.com
+        name: christiaanhuygensbot
       messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
     push:
       branch: main
